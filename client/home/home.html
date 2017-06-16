@@ -1,0 +1,18 @@
+<div>
+	<div>
+		<form ng-submit="createRecord(newRecord)">
+			<input type="text" ng-model="newRecord.name"/>
+			<input type="text" ng-model="newRecord.phoneNumber"/>
+			<button type="submit"> Create Record </button>
+		</form>
+	</div>
+
+	<div>
+		<ul>
+			<li ng-repeat="record in records"
+				ng-click="gotoRecord(record._id)">
+				<strong>{{record.name}}: </strong> <span>{{record.phoneNumber}}</span> 
+			</li>
+		</ul>
+	</div>
+</div>
